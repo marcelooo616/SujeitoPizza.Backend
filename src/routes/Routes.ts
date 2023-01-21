@@ -11,6 +11,8 @@ import { ListCategoryController } from '../controllers/category/ListCategoryCont
 
 import { CreateProductController } from '../controllers/product/CreateProductController';
 
+import uploadConfig from './config/multer'
+
 const router = Router();
 
 //-- ROTAS USER --
