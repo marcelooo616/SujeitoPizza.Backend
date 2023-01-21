@@ -9,6 +9,8 @@ import { CreateCategoryService } from '../services/category/CreateCategoryServic
 import { CreateCategoryController } from '../controllers/category/CreateCategoryController';
 import { ListCategoryController } from '../controllers/category/ListCategoryController';
 
+import { CreateProductController } from '../controllers/product/CreateProductController';
+
 const router = Router();
 
 //-- ROTAS USER --
@@ -22,5 +24,9 @@ router.get('/me', isAuthenticated,  new DetailuserController().handle )
 
 router.post('/category', isAuthenticated, new CreateCategoryController().handle)
 router.get('/category', isAuthenticated, new ListCategoryController().handle)
+
+// -- ROTAS PRODUCTS
+router.post('/product', isAuthenticated, new CreateProductController().handle )
+
 
 export { router }; 
